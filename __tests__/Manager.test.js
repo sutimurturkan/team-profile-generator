@@ -1,20 +1,42 @@
 const Manager = require("../lib/Manager");
-const Employee = require("../lib/Employee");
 
-test("Can set office number via constructor argument", () => {
-  const testValue = 100;
-  const e = new Manager("Foo", 1, "test@test.com", testValue);
-  expect(e.officeNumber).toBe(testValue);
-});
+describe("Manager", () => {
+  it("should create an object with name, id, email, and office number properties", () => {
+    const manager = new Manager("John Doe", 1, "johndoe@test.com", "1234");
 
-test("getRole() should return \"Manager\"", () => {
-  const testValue = "Manager";
-  const e = new Manager("Foo", 1, "test@test.com", 100);
-  expect(e.getRole()).toBe(testValue);
-});
+    expect(manager.name).toEqual("John Doe");
+    expect(manager.id).toEqual(1);
+    expect(manager.email).toEqual("johndoe@test.com");
+    expect(manager.officeNumber).toEqual("1234");
+  });
 
-test("Can get office number via getOffice()", () => {
-  const testValue = 100;
-  const e = new Manager("Foo", 1, "test@test.com", testValue);
-  expect(e.getOfficeNumber()).toBe(testValue);
+  it("should return the manager's name", () => {
+    const manager = new Manager("John Doe", 1, "johndoe@test.com", "1234");
+
+    expect(manager.getName()).toEqual("John Doe");
+  });
+
+  it("should return the manager's id", () => {
+    const manager = new Manager("John Doe", 1, "johndoe@test.com", "1234");
+
+    expect(manager.getId()).toEqual(1);
+  });
+
+  it("should return the manager's email", () => {
+    const manager = new Manager("John Doe", 1, "johndoe@test.com", "1234");
+
+    expect(manager.getEmail()).toEqual("johndoe@test.com");
+  });
+
+  it("should return the manager's role as 'Manager'", () => {
+    const manager = new Manager("John Doe", 1, "johndoe@test.com", "1234");
+
+    expect(manager.getRole()).toEqual("Manager");
+  });
+
+  it("should return the manager's office number", () => {
+    const manager = new Manager("John Doe", 1, "johndoe@test.com", "1234");
+
+    expect(manager.getOfficeNumber()).toEqual("1234");
+  });
 });
