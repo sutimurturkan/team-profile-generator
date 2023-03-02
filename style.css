@@ -1,36 +1,94 @@
-.team-heading {
-  background-color: #e84855;
-  color: #ffffff;
+/* General styles */
+
+* {
+  box-sizing: border-box;
 }
 
-.team-area {
-  max-width: 1000px;
-  margin: 3em auto;
-  flex-wrap: wrap;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
 }
 
-.employee-card {
-  margin: 1em;
-  max-width: 280px;
-  width: 90%;
-  min-height: 22rem;
-  background-color: #007bff;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);
-  border: none;
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.card {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  background-color: #0077c8;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px 5px 0 0;
 }
 
 .card-body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-color: #f6f7f8;
+  padding: 10px;
 }
 
-.list-group-item {
-  color: #000000;
-  text-decoration: none;
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin-bottom: 5px;
+}
+
+/* Specific styles for team roster */
+
+.team-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.employee-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.employee-role {
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.employee-id,
+.employee-email,
+.employee-github,
+.employee-school {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.employee-office-number {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.employee-card {
+  width: 300px;
+  display: inline-block;
+  margin-right: 20px;
 }
